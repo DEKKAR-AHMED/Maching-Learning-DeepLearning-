@@ -17,9 +17,9 @@ plot(1:10,wcss,type="b",main=paste("cluster of Client"),xlab = "number of cluste
 # applaying kmeans 
 set.seed(29)
 kmeans = kmeans(x,5,iter.max = 300,nstart = 10)
-
+y_kmean = kmeans$cluster
 
 
 # visualisation cluset 
-#library(cluster)
+library(cluster)
 clusplot(x,kmeans$cluster,lines=0,shade = TRUE,labels = 2,plotchar = FALSE,color = TRUE ,span = TRUE,main = paste("cluster of client"),xlab = "annual income",ylab = "spending score")

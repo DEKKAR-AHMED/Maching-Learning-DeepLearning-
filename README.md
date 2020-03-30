@@ -18,3 +18,6 @@
 	- Thompson Sampling
   - Clustring:
 	- KMeans
+	- CAH
+ - Association rules Learning: 
+	- Apriori Algorithme.
