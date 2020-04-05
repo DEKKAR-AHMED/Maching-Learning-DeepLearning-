@@ -1,7 +1,10 @@
-# apriori
+setwd("/home/ahmed/Desktop/MachinLearning-DeepLearning/Association Rule Learning/Eclat/")
 
-# data preporcessing
-dataset = read.csv("/home/ahmed/Desktop/MachinLearning-DeepLearning/Association Rule Learning/Apriori/Market_Basket_Optimisation.csv",header= FALSE )
+# import data 
+
+data_set = read.csv("Market_Basket_Optimisation.csv")
+
+# Eclat 
 
 # in the priori algorithme will not use csv data but we will use sparse matrxi that contain a lot of zero 
 # binary metrix 
@@ -21,39 +24,23 @@ summary(dataset)
 
 itemFrequencyPlot(dataset,topN = 10)
 
-#trainin the Appriori on the dataset 
+#trainin the Eclat on the dataset 
 
 #first step choose a minimum for the support it depends on the busnis problem 
 # we considere that the product bought 3 time per day or 21 time in a week
 sup = 28/7500
 # confidence = 0.8 default sup we have done the computation
-rules= apriori(data = dataset,parameter = list(support = 0.004 , confidence =0.2))
+rules= eclat(data = dataset,parameter = list(support = 0.004 , minlen = 2))
 
 # lets view the details and conclude 
 # th e most important information we will must conclude is the numbe
-# of rules with confidence = 0.8 he have 0 rules
-# to remember the confidence means that the rule must be at leat 0.8 % correcte 
-# with 0.4 we have 304 rules 
+# of sets 
 
 # the step2 and three are being executed by the apriori function
 
 # the step for sort the rules bu the decreasing lift 
-inspect(sort(rules,by= "lift")[1:10])
+inspect(sort(rules,by= "support")[1:10])
 # visualisation the result 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

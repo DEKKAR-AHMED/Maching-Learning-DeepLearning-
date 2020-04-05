@@ -21,3 +21,4 @@
 	- CAH
  - Association rules Learning: 
 	- Apriori Algorithme.
+	- Eclat
