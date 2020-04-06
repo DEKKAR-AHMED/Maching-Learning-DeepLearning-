@@ -22,3 +22,4 @@
  - Association rules Learning: 
 	- Apriori Algorithme.
 	- Eclat
+ - Naturl Language Processing
