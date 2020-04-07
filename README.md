@@ -23,3 +23,6 @@
 	- Apriori Algorithme.
 	- Eclat
  - Naturl Language Processing
+ - Classification:
+	- Logistic Regression
+
